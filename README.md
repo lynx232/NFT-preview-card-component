@@ -36,8 +36,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/lynx232/NFT-preview-card-component)
-- Live Site URL: [Add live site URL here](https://gp-nft-preview-card.netlify.app)
+- Solution URL: (https://github.com/lynx232/NFT-preview-card-component)
+- Live Site URL: (https://gp-nft-preview-card.netlify.app)
 
 ## My process
 
