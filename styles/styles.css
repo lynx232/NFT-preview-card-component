@@ -1,0 +1,263 @@
+/* || ASSETS || */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+/* || MODERN RESET
+        Credits go to:
+            Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/ || */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  * {
+    margin: 0;
+  }
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  input, button, textarea, select {
+    font: inherit;
+  }
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  p {
+    text-wrap: pretty;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+  }
+  #root, #__next {
+    isolation: isolate;
+  }
+
+/* || STYLESHEET || */
+:root {
+    /* BACKGROUND */
+    --BODY-BGCOLOR: hsl(217, 54%, 11%);
+    --CARD-BGCOLOR: hsl(216, 50%, 16%);
+
+    /* FONT */
+    --FCOLOR__1: hsl(215, 51%, 70%);
+    --FCOLOR__2: hsl(0, 0%, 100%);
+    --FCOLOR__3: hsl(178, 100%, 50%);
+
+    /* OTHER */
+    --LINE-COLOR: hsl(215, 32%, 27%);
+}
+
+/* || || MOBILE S || || */
+/* || BODY || */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 320px;
+    height: 100vh;
+    background-color: var(--BODY-BGCOLOR);
+    font-family: 'Outfit','Courier New', Courier, monospace;
+    padding: 3.875rem 1.5rem;
+}
+
+#card {
+    max-width: 350px;
+    background-color: var(--CARD-BGCOLOR);
+    color: var(--FCOLOR__1);
+    border-radius: 15px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+#hero-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    margin-bottom: 1.5rem;
+}
+
+#nft {
+    border-radius: 8px;
+    grid-column: 1;
+    grid-row: 1;
+}
+
+#hover-element {
+    align-content: center;
+    grid-column: 1;
+    grid-row: 1;
+}
+
+#view {
+    margin: auto;
+    visibility: hidden;
+}
+
+h1 {
+    color: var(--FCOLOR__2);
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0;
+}
+
+#subheading {
+    font-size: 0.9rem;
+    font-weight: 300;
+    line-height: 1.625rem;
+    letter-spacing: 0;
+    margin-top: 0.75rem;
+}
+
+#items {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--LINE-COLOR);
+    font-size: 0.75rem;
+    padding-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.nav-items {
+    display: flex;
+    align-items: center;
+}
+
+.icon-items {
+    margin-right: 0.375rem;
+}
+
+.icon-items:first-child {
+    width: 0.688rem;
+    height: 1.125rem;
+}
+
+.icon-items:last-child {
+    width: 0.833rem;
+    height: 0.833rem;
+}
+
+#price {
+    color: var(--FCOLOR__3);
+}
+
+#creator {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    font-size: 0.8rem;
+    letter-spacing: 0;
+    margin: 1rem 0 0;
+}
+
+#avatar {
+    width: 2.063rem;
+    height: 2.063rem;
+    margin-right: 1rem;
+}
+
+#credits span {
+    color: var(--FCOLOR__2);
+}
+
+/* || FOOTER || */
+
+.attribution {
+    color: var(--FCOLOR__2);
+    font-size: 0.6rem;
+    
+}
+
+.attribution a {
+    color: var(--FCOLOR__1);
+    text-decoration: none;
+}
+
+/* || || MOBILE M -> ULTRAWIDE || || */
+/* || BODY || */
+@media (min-width: 375px ) {
+    h1 {
+        font-size: 1.375rem;
+    }
+
+    #subheading {
+        font-size: 1.125rem;
+    }
+
+    #price {
+        font-size: 15px;
+    }
+
+    #time {
+        font-size: 15px;
+    }
+
+    #icon-ethereum {
+        width: 0.688rem;
+        height: 1.125rem;
+    }
+
+    #icon-clock {
+        width: 1rem;
+        height: 1rem;
+    }
+
+    #credits {
+        font-size: 0.938rem;
+    }
+}
+/* || FOOTER || */
+@media (min-width: 425px ) {
+    .attribution {
+        font-size: 0.9rem;
+    }
+}
+
+/* || || ACTIVE STATES || || */
+@media (min-width: 1024px ) {
+    #hover-element {
+        transition: 0.3s ease-in-out;
+        border-radius: 8px;
+        background-color: hsla(178, 100%, 50%, 0.503);
+        opacity: 0;
+    } 
+
+    #hover-element:hover {
+        cursor: pointer;
+        opacity: 1;    
+    }
+
+    #view {
+    }
+
+    #hover-element:hover #view {
+        visibility: visible;
+    }
+
+    h1 {
+        transition: 0.3s ease-in-out; 
+    }
+
+    h1:hover {
+        cursor: pointer;
+        color: var(--FCOLOR__3);
+    }
+
+    #credits span {
+        transition: 0.3s ease-in-out;
+    }
+
+    #credits span:hover {
+        cursor: pointer;
+        color: var(--FCOLOR__3);
+    }
+
+    .attribution a:hover {
+        cursor: pointer;
+        color: var(--FCOLOR__3);  
+    }
+
+}
